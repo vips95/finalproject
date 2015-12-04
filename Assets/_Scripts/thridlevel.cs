@@ -14,7 +14,7 @@ public class thridlevel : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col)
 	{
-		if (col.gameObject.name == "Cube")
+		if (col.gameObject.name == "Player")
 		{
 			Application.LoadLevel("Lvl3");
 		}

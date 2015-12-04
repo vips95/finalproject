@@ -13,6 +13,12 @@ public class PlayerAttributes : MonoBehaviour {
     public Text healthBar;
     public Text enemyHealthBar;
     float timer = 0.0f;
+
+	float healthTimer = 0.0f;
+	bool healthshouldRespawn = false;
+
+	public GameObject healthbottle;
+
     public float originx, originy, originz; 
 	
     // Use this for initialization
@@ -35,7 +41,7 @@ public class PlayerAttributes : MonoBehaviour {
                 Debug.Log(timer);
                 if (timer > 3.0f)
                 {
-                    currentHealth = currentHealth + 10;
+                    currentHealth = currentHealth + 2;
                     timer = 0.0f;
                 }
             }
@@ -51,7 +57,15 @@ public class PlayerAttributes : MonoBehaviour {
      }
 
      healthBar.text = "Health " + currentHealth + " / 100";
+		if (healthshouldRespawn ) {
+			healthTimer += Time.deltaTime;
 
+			if(healthTimer > 5.0f)
+			{
+				healthbottle.gameObject.SetActive(true);
+				healthTimer = 0.0f;
+			}
+		}
 	}
 
     public void ApplyDamage(int damage)
@@ -93,4 +107,15 @@ public class PlayerAttributes : MonoBehaviour {
             playerFighting = false;
         }
     }
+	void OnTriggerEnter(Collider item)
+	{
+		if (item.gameObject.tag == "PlayerHealthBottle") {
+	if(currentHealth < 100)
+			{
+				currentHealth = currentHealth +10;
+				item.gameObject.SetActive(false);
+				healthshouldRespawn = true;
+			}
+		}
+			}
 }
