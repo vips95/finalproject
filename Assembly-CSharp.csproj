@@ -53,7 +53,6 @@
      <Compile Include="Assets\_Scripts\RotateObject.cs" />
      <Compile Include="Assets\_Scripts\thridlevel.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\PowerUps Vol 1 Free\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
