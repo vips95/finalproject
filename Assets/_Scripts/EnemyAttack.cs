@@ -21,22 +21,22 @@ public class EnemyAttack : MonoBehaviour {
         distance = Vector3.Distance(Player.transform.position, Enemy.transform.position);
         if (distance <= 3.5)
         {
-            //Enemy.GetComponent<Animation>().CrossFadeQueued("run",0.3f,QueueMode.PlayNow);
-           // Enemy.GetComponent<Animation>().CrossFade("attack_1");
+            Enemy.GetComponent<Animation>().CrossFadeQueued("run",0.3f,QueueMode.PlayNow);
+            Enemy.GetComponent<Animation>().CrossFade("attack_2");
             attributes.ApplyDamage(1);
             attributes.playerInCombat(1);
         }
         else if(distance <= 15 && distance > 3.5 ){
-           // Enemy.GetComponent<Animation>().CrossFadeQueued("attack_1", 0.3f, QueueMode.PlayNow);
-           // Enemy.GetComponent<Animation>().CrossFade("run");
+            Enemy.GetComponent<Animation>().CrossFadeQueued("attack_2", 0.3f, QueueMode.PlayNow);
+            Enemy.GetComponent<Animation>().CrossFade("run");
             Enemy.transform.LookAt(Player.transform.position);
             Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position,Player.transform.position,0.1f);
             attributes.playerInCombat(0);
         }
         else
         {
-          //  Enemy.GetComponent<Animation>().CrossFadeQueued("run", 0.3f, QueueMode.PlayNow);
-           // Enemy.GetComponent<Animation>().CrossFade("idle");
+            Enemy.GetComponent<Animation>().CrossFadeQueued("run", 0.3f, QueueMode.PlayNow);
+            Enemy.GetComponent<Animation>().CrossFade("idle");
             attributes.playerInCombat(0);
         }
 	}
