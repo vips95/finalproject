@@ -25,12 +25,13 @@ public class PlayerAttributes : MonoBehaviour {
 	void Start () {
         currentHealth = health;
         healthBar.text = "Health " + currentHealth + " / 100";
+        Debug.Log("enemy health : " + enemyHeal th);
         enemyHealthBar.text = "Cyclocp's health " + enemyHealth;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("Player fighting" + playerFighting);
+        
          if (!playerFighting)
          {
              Debug.Log("heatlh " + currentHealth);
@@ -39,9 +40,9 @@ public class PlayerAttributes : MonoBehaviour {
                 
                 timer += Time.deltaTime;
                 Debug.Log(timer);
-                if (timer > 3.0f)
+                if (timer > 5.0f)
                 {
-                    currentHealth = currentHealth + 2;
+                    currentHealth = currentHealth + 10;
                     timer = 0.0f;
                 }
             }
@@ -85,11 +86,9 @@ public class PlayerAttributes : MonoBehaviour {
                 enemyHealth -= 20;
                 enemyHealthBar.text = "Cyclop's health " + enemyHealth;
                 CdamageCount = 0;
-                if (enemyHealth < 400 && enemyHealth >450 ) {
-                    Enemy.GetComponent<Animation>().Play("stunned_idle");
-                }
-                else if (enemyHealth == 0)
+                if (enemyHealth == 0)
                 {
+                    Enemy.GetComponent<Animation>().Stop("attack_2");
                     Enemy.GetComponent<Animation>().Play("death");
                 }
             }
@@ -107,15 +106,17 @@ public class PlayerAttributes : MonoBehaviour {
             playerFighting = false;
         }
     }
+
 	void OnTriggerEnter(Collider item)
 	{
 		if (item.gameObject.tag == "PlayerHealthBottle") {
-	if(currentHealth < 100)
-			{
+
+	        if(currentHealth < 100)
+			    {
 				currentHealth = currentHealth +10;
 				item.gameObject.SetActive(false);
 				healthshouldRespawn = true;
-			}
+			    }
 		}
 			}
 }
