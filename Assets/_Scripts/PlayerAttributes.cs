@@ -25,7 +25,7 @@ public class PlayerAttributes : MonoBehaviour {
 	void Start () {
         currentHealth = health;
         healthBar.text = "Health " + currentHealth + " / 100";
-        Debug.Log("enemy health : " + enemyHeal th);
+        Debug.Log("enemy health : " + enemyHealth);
         enemyHealthBar.text = "Cyclocp's health " + enemyHealth;
 	}
 	
