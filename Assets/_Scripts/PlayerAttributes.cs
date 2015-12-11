@@ -7,11 +7,12 @@ public class PlayerAttributes : MonoBehaviour {
     public GameObject Player;
     public GameObject Enemy;
     
-    public int health, enemyHealth;
+    public int health, enemyHealth, Score;
     int currentHealth, HdamageCount, CdamageCount;
     bool playerFighting;
     public Text healthBar;
     public Text enemyHealthBar;
+	public Text scoreLevel;
     float timer = 0.0f;
 
 	float healthTimer = 0.0f;
