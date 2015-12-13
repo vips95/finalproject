@@ -9,6 +9,8 @@ TagManager:
   - Smelly
   - Fire
   - Enemy
+  - PlayerHealthBottle
+  - Hero
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,6 @@ public class PlayerAttributes : MonoBehaviour {
     int currentHealth, HdamageCount, CdamageCount;
     bool playerFighting;
     public Text healthBar;
-    public Text enemyHealthBar;
 	public Text scoreLevel;
     float timer = 0.0f;
 
@@ -25,9 +24,7 @@ public class PlayerAttributes : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         currentHealth = health;
-        healthBar.text = "Health " + currentHealth + " / 100";
-        Debug.Log("enemy health : " + enemyHealth);
-        enemyHealthBar.text = "Cyclocp's health " + enemyHealth;
+        healthBar.text = "Health " + currentHealth + " / 100"; 
 	}
 	
 	// Update is called once per frame
@@ -35,7 +32,7 @@ public class PlayerAttributes : MonoBehaviour {
         
          if (!playerFighting)
          {
-             Debug.Log("heatlh " + currentHealth);
+            // Debug.Log("heatlh " + currentHealth);
             if (currentHealth < 100)
                 {
                 
@@ -82,15 +79,12 @@ public class PlayerAttributes : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetMouseButton(0))
         {
-            if (CdamageCount == 100)
+            if (CdamageCount == 10)
             {
-                enemyHealth -= 20;
-                enemyHealthBar.text = "Cyclop's health " + enemyHealth;
                 CdamageCount = 0;
                 if (enemyHealth == 0)
                 {
-                    Enemy.GetComponent<Animation>().Stop("attack_2");
-                    Enemy.GetComponent<Animation>().Play("death");
+                   //   
                 }
             }
         }
