@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 461874}
   - 33: {fileID: 3361874}
   - 23: {fileID: 2361874}
+  - 65: {fileID: 6573540}
   m_Layer: 0
   m_Name: Diamond Green
   m_TagString: PickUp
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -205.85495, y: -5.30000019, z: 94.1999969}
+  m_LocalPosition: {x: -205.85495, y: -8.39999962, z: 94.3199997}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,7 +48,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -60,6 +63,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161874}
   m_Mesh: {fileID: 4300000, guid: 94c1a6d8a8d20b548b6960fa81ab9d9c, type: 3}
+--- !u!65 &6573540
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.74694777, y: 1.45031309, z: 1.67489624}
+  m_Center: {x: -.0589523315, y: 0, z: .0394630432}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

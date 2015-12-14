@@ -671,6 +671,7 @@ GameObject:
   - 4: {fileID: 483064}
   - 111: {fileID: 11146524}
   - 114: {fileID: 11455654}
+  - 114: {fileID: 11454260}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1548,8 +1549,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179052}
-  m_LocalRotation: {x: 0, y: -.935953677, z: 0, w: .352123111}
-  m_LocalPosition: {x: 85.3044968, y: 0, z: 110.731682}
+  m_LocalRotation: {x: 0, y: -.966853261, z: 0, w: .255332738}
+  m_LocalPosition: {x: 162.720001, y: -.5, z: 243.970001}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 442638}
@@ -1706,6 +1707,21 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &11454260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523b8eda5e1cd23439d246c258ab7758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  Enemy: {fileID: 179052}
+  distance: 10
+  attributes: {fileID: 0}
 --- !u!114 &11455654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1740,7 +1756,9 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1828,7 +1846,9 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

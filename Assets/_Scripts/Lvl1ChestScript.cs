@@ -6,7 +6,7 @@ public class Lvl1ChestScript : MonoBehaviour {
     public Text GemText;
     int GemCount = 0;
     bool guiEnable = false;
-    float timer = 0;
+	float timer = 0;
 	// Use this for initialization
 	void Start () {
         GemText.text = "Gems Collected " + GemCount + "/5";

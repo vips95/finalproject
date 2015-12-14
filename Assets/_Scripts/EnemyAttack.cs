@@ -16,7 +16,7 @@ public class EnemyAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Player = GameObject.FindWithTag("Player");
+        Player = GameObject.FindWithTag("Hero");
         Enemy = GameObject.FindWithTag("Enemy");
         distance = Vector3.Distance(Player.transform.position, Enemy.transform.position);
         if (distance <= 3.5)
