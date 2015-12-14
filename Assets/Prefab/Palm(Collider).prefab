@@ -10,8 +10,7 @@ GameObject:
   - 4: {fileID: 449614}
   - 33: {fileID: 3377102}
   - 23: {fileID: 2389916}
-  - 111: {fileID: 11166596}
-  - 64: {fileID: 6491640}
+  - 136: {fileID: 13645730}
   m_Layer: 0
   m_Name: Palm(Collider)
   m_TagString: Untagged
@@ -26,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 409.74057, y: 8.75205517, z: 261.029968}
+  m_LocalPosition: {x: 236.52536, y: 8.75205517, z: 414.494171}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,32 +62,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188366}
   m_Mesh: {fileID: 4300000, guid: 02e48269f8d554fbca75435761452392, type: 3}
---- !u!64 &6491640
-MeshCollider:
+--- !u!136 &13645730
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188366}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: 02e48269f8d554fbca75435761452392, type: 3}
---- !u!111 &11166596
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188366}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Radius: 1
+  m_Height: 27
+  m_Direction: 1
+  m_Center: {x: 1.04999995, y: 10.1000004, z: .5}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -98,6 +84,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

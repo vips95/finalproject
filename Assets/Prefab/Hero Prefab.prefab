@@ -825,7 +825,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 480600}
   - 95: {fileID: 9595936}
-  - 111: {fileID: 11105142}
   - 143: {fileID: 14355106}
   - 82: {fileID: 8239576}
   - 114: {fileID: 11441188}
@@ -1761,7 +1760,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174486}
   m_LocalRotation: {x: 0, y: .675590038, z: 0, w: -.737277508}
-  m_LocalPosition: {x: 432.600006, y: 6, z: 284.209991}
+  m_LocalPosition: {x: 426, y: .180000007, z: 165}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 480620}
@@ -2121,21 +2120,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &11105142
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174486}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 5972819e9213df24699b6f7aa3de9784, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 5972819e9213df24699b6f7aa3de9784, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &11441188
 MonoBehaviour:
   m_ObjectHideFlags: 1
