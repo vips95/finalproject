@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class PlayerAttributes : MonoBehaviour {
     
     public GameObject Player;
-    public GameObject Enemy;
     
     public int health = 100;
     int currentHealth, HdamageCount;
@@ -36,7 +35,6 @@ public class PlayerAttributes : MonoBehaviour {
         
          if (!playerFighting)
          {
-            // Debug.Log("heatlh " + currentHealth);
             if (currentHealth < 100)
                 {
                 

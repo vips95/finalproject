@@ -7,6 +7,8 @@ public class HeroScript : MonoBehaviour {
     Vector3 inputVec;
     Vector3 targetDirection;
 
+    public EnemyAI enemy;
+
     void Update()
     {
         //Get input from controls
@@ -31,7 +33,8 @@ public class HeroScript : MonoBehaviour {
 
         if (Input.GetButtonDown("Fire1"))
         {
-            anim.SetTrigger("attack_1");     
+            anim.SetTrigger("attack_1");
+            enemy.hitCount = enemy.hitCount + 1;
         }
 		
 		 if (Input.GetButtonDown("Jump"))
@@ -60,9 +63,19 @@ public class HeroScript : MonoBehaviour {
         motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1) ? .7f : 1;    
     }
 
-    void onCollisionEnter(Collider col)
+    void OnTriggerEnter(Collider col)
     {
-            Debug.Log("Hit" + col.gameObject.name);
+        if (col.tag == "Enemy")
+        {
+            Debug.Log(enemy.hitCount);
+            if (enemy.hitCount > 1)
+            {
+                enemy.enemyAlive = false;
+                enemy.Goblin.GetComponent<Animation>().Stop();
+                enemy.Goblin.GetComponent<Animation>().Play("death");
+                //Destroy(col.gameObject);
+            }
+        }
     }
 }
     
