@@ -236,7 +236,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 228.369995
+      value: 230.380005
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalPosition.y
@@ -268,19 +268,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400136, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalRotation.x
-      value: .67253077
+      value: .672530711
       objectReference: {fileID: 0}
     - target: {fileID: 400136, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalRotation.y
-      value: .591397285
+      value: .591397226
       objectReference: {fileID: 0}
     - target: {fileID: 400136, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -.357632011
+      value: -.357631981
       objectReference: {fileID: 0}
     - target: {fileID: 400136, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -.264671773
+      value: -.264671743
       objectReference: {fileID: 0}
     - target: {fileID: 100068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_Name
@@ -695,7 +695,7 @@ GameObject:
   - 114: {fileID: 736075962}
   - 114: {fileID: 736075961}
   m_Layer: 5
-  m_Name: Ins
+  m_Name: Instruction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,6 +1027,7 @@ GameObject:
   - 223: {fileID: 1005058443}
   - 114: {fileID: 1005058446}
   - 114: {fileID: 1005058445}
+  - 222: {fileID: 1005058447}
   m_Layer: 5
   m_Name: InstructionMenu
   m_TagString: Untagged
@@ -1106,6 +1107,12 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!222 &1005058447
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005058442}
 --- !u!1001 &1033811780
 Prefab:
   m_ObjectHideFlags: 0
@@ -1823,7 +1830,7 @@ MonoBehaviour:
   instructionMenu: {fileID: 1005058443}
   startText: {fileID: 676027412}
   exitText: {fileID: 1724336343}
-  instructionText: {fileID: 0}
+  instructionText: {fileID: 736075961}
 --- !u!1 &1918456260
 GameObject:
   m_ObjectHideFlags: 0
