@@ -19,7 +19,7 @@ public class ButtonActions : MonoBehaviour {
 		exitText = exitText.GetComponent<Button> ();
 		instructionText = instructionText.GetComponent<Button> ();
 		quitMenu.enabled = false;
-		instructionText.enabled = false;
+		instructionText.enabled = true;
 		instructionMenu.enabled = false;
 		
 	}
@@ -41,14 +41,7 @@ public class ButtonActions : MonoBehaviour {
 		Application.Quit ();
 	}
 
-	public void instPress()
-	{
-		quitMenu.enabled = false;
-		startText.enabled = false;
-		exitText.enabled = false;
-		instructionText.enabled = false;
-		instructionMenu.enabled = true;
-	}
+
 	public void Start_Game () {
 		Application.LoadLevel ("Level 1");
 	}
@@ -56,8 +49,11 @@ public class ButtonActions : MonoBehaviour {
 
 	public void Instruction_game() {
 
+		quitMenu.enabled = false;
+		startText.enabled = false;
+		exitText.enabled = false;
+		instructionText.enabled = false;
 		instructionMenu.enabled = true;
-		instPress ();
 	}
 	
 	public void Quit_Game(){
