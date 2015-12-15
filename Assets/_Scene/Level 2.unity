@@ -165,7 +165,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1008,6 +1010,10 @@ Prefab:
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
+    - target: {fileID: 11441188, guid: 706546cda169446418014aeae667ff65, type: 2}
+      propertyPath: Gem
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6523364, guid: 706546cda169446418014aeae667ff65, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 706546cda169446418014aeae667ff65, type: 2}
@@ -1273,6 +1279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be88b45182ef7c42b3debed0c201740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GemText: {fileID: 0}
+  GemCount: 0
 --- !u!1001 &1643554408
 Prefab:
   m_ObjectHideFlags: 0

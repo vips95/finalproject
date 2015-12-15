@@ -8,6 +8,8 @@ public class ButtonActions : MonoBehaviour {
 	public Button startText;
 	public Button exitText;
 	public Button instructionText;
+
+
 	void Start ()
 		
 	{
@@ -21,16 +23,7 @@ public class ButtonActions : MonoBehaviour {
 		instructionMenu.enabled = false;
 		
 	}
-	public void ExitPress() //this function will be used on our Exit button
-		
-	{
-		quitMenu.enabled = true; //enable the Quit menu when we click the Exit button
-		startText.enabled = false; //then disable the Play and Exit buttons so they cannot be clicked
-		exitText.enabled = false;
-		instructionText.enabled = false;
-		instructionMenu.enabled = false;
-		
-	}
+
 	public void NoPress() //this function will be used for our "NO" button in our Quit Menu
 		
 	{
@@ -41,6 +34,13 @@ public class ButtonActions : MonoBehaviour {
 		instructionMenu.enabled = false;
 		
 	}
+
+	public void YesPress() //this function will be used for our "NO" button in our Quit Menu
+		
+	{
+		Application.Quit ();
+	}
+
 	public void instPress()
 	{
 		quitMenu.enabled = false;
@@ -57,10 +57,15 @@ public class ButtonActions : MonoBehaviour {
 	public void Instruction_game() {
 
 		instructionMenu.enabled = true;
+		instPress ();
 	}
 	
 	public void Quit_Game(){
-		Application.Quit ();
+		quitMenu.enabled = true; //enable the Quit menu when we click the Exit button
+		startText.enabled = false; //then disable the Play and Exit buttons so they cannot be clicked
+		exitText.enabled = false;
+		instructionText.enabled = false;
+		instructionMenu.enabled = false;
 	}	
 }
 

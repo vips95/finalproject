@@ -139,8 +139,9 @@ ModelImporter:
     400128: Spine2
     400130: //RootNode
     400132: sword_joint
-    7400000: idle
+    7400000: idle_1
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -162,7 +163,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: idle
+      name: idle_1
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 220
@@ -359,7 +360,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

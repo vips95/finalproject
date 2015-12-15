@@ -7,12 +7,13 @@ public class PlayerAttributes : MonoBehaviour {
     public GameObject Player;
     public GameObject Enemy;
     
-    public int health, enemyHealth, Score;
-    int currentHealth, HdamageCount, CdamageCount;
+    public int health = 100;
+    int currentHealth, HdamageCount;
     bool playerFighting;
     public Text healthBar;
 	public Text scoreLevel;
     float timer = 0.0f;
+	int score = 0;
 
 	float healthTimer = 0.0f;
 	bool healthshouldRespawn = false;
@@ -20,11 +21,14 @@ public class PlayerAttributes : MonoBehaviour {
 	public GameObject healthbottle;
 
     public float originx, originy, originz; 
+
+	public Lvl1ChestScript Gem;
 	
     // Use this for initialization
 	void Start () {
         currentHealth = health;
         healthBar.text = "Health " + currentHealth + " / 100"; 
+		scoreLevel.text = "Score : " + score;
 	}
 	
 	// Update is called once per frame
@@ -65,29 +69,21 @@ public class PlayerAttributes : MonoBehaviour {
 				healthTimer = 0.0f;
 			}
 		}
+
+		healthBar.text = "Health " + currentHealth + " / 100"; 
+		scoreLevel.text = "Score : " + score;
 	}
 
     public void ApplyDamage(int damage)
     {
         HdamageCount += damage;
-        CdamageCount += damage;
         if (HdamageCount == 100)
         {
             currentHealth = currentHealth - 10;
             healthBar.text = "Health " + currentHealth + " / 100";
             HdamageCount = 0;
         }
-        if (Input.GetKey(KeyCode.LeftControl) || Input.GetMouseButton(0))
-        {
-            if (CdamageCount == 10)
-            {
-                CdamageCount = 0;
-                if (enemyHealth == 0)
-                {
-                   //   
-                }
-            }
-        }
+        
     }
 
     public void playerInCombat(int combat)
@@ -113,5 +109,16 @@ public class PlayerAttributes : MonoBehaviour {
 				healthshouldRespawn = true;
 			    }
 		}
+
+		if(item.CompareTag("PickUp")){
+			Gem.GemCount += 1;
+			score += 100;
+			Destroy(item.gameObject);
+		}
 			}
+
+
+		  
+			
+	
 }

@@ -20,12 +20,17 @@ private Vector3 _destination;
 	void Update () {
 		distance = Vector3.Distance(Goblin.transform.position, Hero.transform.position);
 		if(distance >= 5){
-            Goblin.transform.position = Vector3.MoveTowards(Goblin.transform.position, Hero.transform.position, 0.25f);
+            Goblin.transform.position = Vector3.MoveTowards(Goblin.transform.position, Hero.transform.position, 0.15f);
             Vector3 targetDir = Hero.transform.position - Goblin.transform.position;
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, 1, 0.0F);
             Debug.DrawRay(transform.position, newDir, Color.red);
             transform.rotation = Quaternion.LookRotation(newDir);
             Goblin.GetComponent<Animation>().Play("run");
+		}
+
+		if (distance < 5) {
+			Goblin.GetComponent<Animation>().Stop("run");
+			Goblin.GetComponent<Animation>().Play("attack1");
 		}
 	}
 }
