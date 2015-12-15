@@ -524,6 +524,7 @@ GameObject:
   - 4: {fileID: 883605467}
   - 218: {fileID: 883605466}
   - 154: {fileID: 883605465}
+  - 182: {fileID: 883605468}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -584,6 +585,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!182 &883605468
+WindZone:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883605464}
+  m_Enabled: 1
+  m_Mode: 0
+  m_Radius: 20
+  m_WindMain: .150000006
+  m_WindTurbulence: .5
+  m_WindPulseMagnitude: .5
+  m_WindPulseFrequency: .00999999978
 --- !u!1 &930969008
 GameObject:
   m_ObjectHideFlags: 0

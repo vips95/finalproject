@@ -236,15 +236,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 230.380005
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.94000006
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 43.0099983
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
       propertyPath: m_LocalRotation.x
@@ -290,6 +290,18 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 89dd0499121a7461393ef991b21e08c1, type: 2}
+    - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
   m_IsPrefabParent: 0
@@ -995,7 +1007,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907668066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 225.979996, y: -3.43000007, z: 37.3100014}
+  m_LocalPosition: {x: 228, y: -2, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1585,8 +1597,8 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 1
-  m_WindTurbulence: 1
+  m_WindMain: .150000006
+  m_WindTurbulence: .5
   m_WindPulseMagnitude: .5
   m_WindPulseFrequency: .00999999978
 --- !u!4 &1665055480
