@@ -8,22 +8,27 @@ public Animation anim;
 public GameObject Hero;
 public GameObject Goblin;
 public float distance;
+float time;
 
-public bool enemyAlive=true;
-//float time = 0;
-public int hitCount = 0;
+int hitCount = 3;
+int damageCount;
 
 private Vector3 _destination;
 
 	// Use this for initialization
 	void Start () {
-        hitCount = 0;
-        enemyAlive = true;
+        //enemyAlive = true;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (enemyAlive==true)
+    void Update()
+    {
+        enemyAI();
+    }
+
+    void enemyAI()
+    {
+        if (hitCount > 0)
         {
             distance = Vector3.Distance(Goblin.transform.position, Hero.transform.position);
             if (distance >= 6)
@@ -41,10 +46,28 @@ private Vector3 _destination;
                 Goblin.GetComponent<Animation>().Stop("run");
                 Goblin.GetComponent<Animation>().Play("attack1");
             }
-
+        }
+        else
+        {
+            Goblin.GetComponent<Animation>().Stop("run");
+            Goblin.GetComponent<Animation>().Stop("attack1");
+            Goblin.GetComponent<Animation>().Play("death");
+            time += Time.deltaTime;
+            if (time >= 2.75f)
+                DestroyObject(this.gameObject);
         }
 
 	}
+
+    public void ApplyDamage()
+    {
+        Debug.Log("Hitting");
+         hitCount -= 1;
+         Debug.Log(hitCount);
+    }
+
+
+    
 }
 
 
