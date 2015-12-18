@@ -54,6 +54,7 @@ public class ButtonActions : MonoBehaviour {
 		exitText.enabled = false;
 		instructionText.enabled = false;
 		instructionMenu.enabled = true;
+
 	}
 	
 	public void Quit_Game(){
@@ -63,6 +64,7 @@ public class ButtonActions : MonoBehaviour {
 		instructionText.enabled = false;
 		instructionMenu.enabled = false;
 	}	
+
 }
 
 
