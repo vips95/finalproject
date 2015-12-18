@@ -17,6 +17,7 @@ public class Lvl1ChestScript : MonoBehaviour {
     void Update ()
     {
 		GemText.text = "Gems Collected " + GemCount + "/5";
+
     }
 
 	void OnTriggerEnter (Collider col) {
@@ -27,6 +28,7 @@ public class Lvl1ChestScript : MonoBehaviour {
 			if (col.name == "Hero") {
 				guiEnable = true;
 				OnGUI();
+
 			}
 		}
 
@@ -35,15 +37,14 @@ public class Lvl1ChestScript : MonoBehaviour {
 	public void OnGUI(){
 		if (guiEnable) {
 			GUI.Label (new Rect (350, 350, 300, 100), "You should collect at least 5 gems before you can enter next level");
-            timer += Time.deltaTime;
-			if(timer > 5.0f){
+			timer += Time.deltaTime;
+			if (timer > 5.0f) {
 				guiEnable = false;
 				timer = 0;
 			}
 		}
+	}
 
-   
-  
-}
+ 
 
 }
