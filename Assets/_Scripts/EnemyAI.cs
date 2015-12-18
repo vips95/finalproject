@@ -8,55 +8,33 @@ public Animation anim;
 public GameObject Hero;
 public GameObject Goblin;
 public float distance;
-
-public bool enemyAlive=true;
-//float time = 0;
-public int hitCount = 0;
+public bool enemyAlive;
 
 private Vector3 _destination;
 
 	// Use this for initialization
 	void Start () {	
-        hitCount = 0;
-        enemyAlive = true;
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (enemyAlive == true) {
-			distance = Vector3.Distance (Goblin.transform.position, Hero.transform.position);
-			if (distance >= 6) {
-				Goblin.transform.position = Vector3.MoveTowards (Goblin.transform.position, Hero.transform.position, 0.15f);
-				Vector3 targetDir = Hero.transform.position - Goblin.transform.position;
-				Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, 1, 0.0F);
-				Debug.DrawRay (transform.position, newDir, Color.red);
-				transform.rotation = Quaternion.LookRotation (newDir);
-				Goblin.GetComponent<Animation> ().Play ("run");
-			}
-
-			if (distance < 6) {
-				Goblin.GetComponent<Animation> ().Stop ("run");
-				Goblin.GetComponent<Animation> ().Play ("attack1");
-				applyDamage(1);
-			}
-
-		} else {
-			Goblin.GetComponent<Animation> ().Stop ("run");
-			Goblin.GetComponent<Animation> ().Stop ("attack1");
-			Goblin.GetComponent<Animation> ().Play("death");
+	void Update () 
+	{
+		distance = Vector3.Distance (Goblin.transform.position, Hero.transform.position);
+		if (distance >= 6) {
+			Goblin.transform.position = Vector3.MoveTowards (Goblin.transform.position, Hero.transform.position, 0.1f);
+			Vector3 targetDir = Hero.transform.position - Goblin.transform.position;
+			Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, 1, 0.0F);
+			Debug.DrawRay (transform.position, newDir, Color.red);
+			transform.rotation = Quaternion.LookRotation (newDir);
+			Goblin.GetComponent<Animation> ().Play ("run");
+		}
 		
-		}
+		if (distance < 6) {
+			Goblin.GetComponent<Animation> ().Stop ("run");
+			Goblin.GetComponent<Animation> ().Play ("attack1");
+		} 
 
-	}
-
-	public void applyDamage(int hit){
-		int count = 0;
-		count += hit;
-		if (count >= 2) {
-			enemyAlive = false;
-			count = 0;
-		}
-	
 	}
 }
 
