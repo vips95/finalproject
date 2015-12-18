@@ -52,6 +52,7 @@
      <Compile Include="Assets\_Scripts\HeroScript.cs" />
      <Compile Include="Assets\_Scripts\HighScoreScript.cs" />
      <Compile Include="Assets\_Scripts\Lvl1ChestScript.cs" />
+     <Compile Include="Assets\_Scripts\Lvl1Message.cs" />
      <Compile Include="Assets\_Scripts\Lvl2Script.cs" />
      <Compile Include="Assets\_Scripts\PlayerAttributes.cs" />
      <Compile Include="Assets\_Scripts\RotateObject.cs" />
