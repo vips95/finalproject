@@ -8,6 +8,8 @@ public class HeroScript : MonoBehaviour {
     Vector3 targetDirection;
 
     public EnemyAI enemy;
+    bool applyDamage = false;
+    GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
 
     void Update()
     {
@@ -34,7 +36,13 @@ public class HeroScript : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("attack_1");
-            enemy.hitCount = enemy.hitCount + 1;
+            if (applyDamage == true)
+            {
+                foreach (GameObject e in enemys)
+                {
+                    enemy.ApplyDamage();
+                }
+            }
         }
 		
 		 if (Input.GetButtonDown("Jump"))
@@ -65,17 +73,12 @@ public class HeroScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Enemy")
+        if (col.CompareTag("Enemy"))
         {
-            Debug.Log(enemy.hitCount);
-            if (enemy.hitCount > 1)
-            {
-                enemy.enemyAlive = false;
-                enemy.Goblin.GetComponent<Animation>().Stop();
-                enemy.Goblin.GetComponent<Animation>().Play("death");
-                //Destroy(col.gameObject);
-            }
+            applyDamage = true;
         }
+             
+            
     }
 }
     
