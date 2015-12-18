@@ -602,6 +602,18 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 89dd0499121a7461393ef991b21e08c1, type: 2}
+    - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400068, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c03169b7f6c601f4abb1008155ff1764, type: 3}
   m_IsPrefabParent: 0
@@ -1788,10 +1800,10 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 1
-  m_WindTurbulence: 1
-  m_WindPulseMagnitude: .5
-  m_WindPulseFrequency: .00999999978
+  m_WindMain: .200000003
+  m_WindTurbulence: .0500000007
+  m_WindPulseMagnitude: 1
+  m_WindPulseFrequency: 1
 --- !u!4 &1665055480
 Transform:
   m_ObjectHideFlags: 0
