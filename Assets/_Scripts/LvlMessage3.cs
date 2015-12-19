@@ -26,7 +26,7 @@ public class LvlMessage3 : MonoBehaviour {
 		
 		if(guienable==true){
 			GUI.Label (new Rect (100, 440, 300, 100), "Level 3",largefont); 
-			GUI.Label (new Rect (10,500,300,100),"Kill the enemies and final boss demon \nand collect treasure to finish the game",smallfont);
+			GUI.Label (new Rect (10,500,300,100),"Kill or dodge the enemies and final boss demon \nand collect treasure to finish the game",smallfont);
 			timer += Time.deltaTime;
 			if (timer > 10.0f) {
 				guienable = false;

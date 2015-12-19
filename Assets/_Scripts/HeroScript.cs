@@ -1,14 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HeroScript : MonoBehaviour {
 
+	public GameObject Player;
+	public GameObject Enemy;
+
+	public int health, enemyHealth;
+	int currentHealth, HdamageCount, CdamageCount;
+	public Text healthBar;
+	public Text enemyHealthBar;
     public Animator anim;
     Vector3 inputVec;
     Vector3 targetDirection;
 	int hitCount = 0;
+	float timer = 0.0f;
+	bool playerFighting;
+	public float originx, originy, originz; 
+	
+	public EnemyAI enemy;
 
-    public EnemyAI enemy;
+	void Start () {
+		currentHealth = health;
+		healthBar.text = "Health " + currentHealth + " / 10";
+		enemyHealthBar.text = "Cyclocp's health " + enemyHealth;
+		if (enemyHealth == 0) {
+			Enemy.GetComponent<Animation> ().Play ("death");
+		}
+	}
 
     void Update()
     {
@@ -54,15 +74,44 @@ public class HeroScript : MonoBehaviour {
         }
 
         UpdateMovement();  //update character position and facing
-    }
 
-    void UpdateMovement()
-    {
-        //get movement input from controls
-        Vector3 motion = inputVec;
+		Debug.Log("Player fighting" + playerFighting);
+		if (!playerFighting)
+		{
+			Debug.Log("heatlh " + currentHealth);
+			if (currentHealth < 10)
+			{
+				
+				timer += Time.deltaTime;
+				Debug.Log(timer);
+				if (timer > 3.0f)
+				{
+					currentHealth = currentHealth + 1;
+					timer = 0.0f;
+				}
+			}
+			
+		}
+		else
+		{
+			if (currentHealth == 0)
+			{
+				Player.transform.position = new Vector3(originx, originy, originz);
+				currentHealth = 10;   
+			}
+		}
+		
+		healthBar.text = "Health " + currentHealth + " / 10";
 
-        //reduce input for diagonal movement
-        motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1) ? .7f : 1;    
+	}
+	
+	void UpdateMovement()
+	{
+		//get movement input from controls
+		Vector3 motion = inputVec;
+		
+		//reduce input for diagonal movement
+		motion *= (Mathf.Abs(inputVec.x) == 1 && Mathf.Abs(inputVec.z) == 1) ? .7f : 1;    
     }
 
 	void OnTriggerEnter(Collider col){
@@ -71,6 +120,29 @@ public class HeroScript : MonoBehaviour {
 		if(col.gameObject.CompareTag("Enemy"))
 			Destroy (col.gameObject);
 
+	}
+	public void ApplyDamage(int damage)
+	{
+		HdamageCount += damage;
+		CdamageCount += damage;
+		if (HdamageCount == 10)
+		{
+			currentHealth = currentHealth - 2;
+			healthBar.text = "Health " + currentHealth + " / 10";
+			HdamageCount = 0;
+		}
+}
+
+	public void playerInCombat(int combat)
+	{
+		if (combat == 1)
+		{
+			playerFighting = true;
+		}
+		else
+		{
+			playerFighting = false;
+		}
 	}
 }
     

@@ -56,10 +56,12 @@
      <Compile Include="Assets\_Scripts\Lvl2Message.cs" />
      <Compile Include="Assets\_Scripts\Lvl2Script.cs" />
      <Compile Include="Assets\_Scripts\LvlMessage3.cs" />
+     <Compile Include="Assets\_Scripts\MyUnitySingletonScript.cs" />
      <Compile Include="Assets\_Scripts\PlayerAttributes.cs" />
      <Compile Include="Assets\_Scripts\RotateObject.cs" />
      <Compile Include="Assets\_Scripts\gameOverScript.cs" />
      <Compile Include="Assets\_Scripts\playerdeadscript.cs" />
+     <Compile Include="Assets\_Scripts\treasurescript.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

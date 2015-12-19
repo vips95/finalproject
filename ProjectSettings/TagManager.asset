@@ -11,6 +11,9 @@ TagManager:
   - Enemy
   - PlayerHealthBottle
   - Hero
+  - PickUp
+  - HighScore
+  - GameMusic
   layers:
   - Default
   - TransparentFX

@@ -309,8 +309,8 @@ GameObject:
   - 4: {fileID: 606384502}
   - 33: {fileID: 606384501}
   - 23: {fileID: 606384500}
-  - 64: {fileID: 606384499}
   - 114: {fileID: 606384498}
+  - 65: {fileID: 606384499}
   m_Layer: 0
   m_Name: Treasure_Chest_Prefab
   m_TagString: Untagged
@@ -327,22 +327,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 606384497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 3f350d0929e3c44e6be127e886ac718f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &606384499
-MeshCollider:
+--- !u!65 &606384499
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 2ecb034f3ede54b968a919fd40decee7,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606384497}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: 52598b04e30d34007a3056835ff6b75e, type: 3}
+  m_Size: {x: 5.46437454, y: 3.86038804, z: 4.63169098}
+  m_Center: {x: 2.37300979e-09, y: 1.01919997, z: 2.84761192e-09}
 --- !u!23 &606384500
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -385,11 +384,15 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606384497}
   m_LocalRotation: {x: -.0116164675, y: .994223952, z: -.00857445877, w: -.106349938}
-  m_LocalPosition: {x: 239.119995, y: .670000017, z: 273.679993}
+  m_LocalPosition: {x: 239.110001, y: .959999979, z: 273.679993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1157444268 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 179052, guid: d477b0034e87cad43afa1260f5162ddd, type: 2}
+  m_PrefabInternal: {fileID: 1208048611}
 --- !u!1001 &1208048611
 Prefab:
   m_ObjectHideFlags: 0
@@ -622,7 +625,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -74.0899963, y: -26}
+  m_AnchoredPosition: {x: -176, y: -26}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1523889202
@@ -740,6 +743,30 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -.264671773
       objectReference: {fileID: 0}
+    - target: {fileID: 11478520, guid: 706546cda169446418014aeae667ff65, type: 2}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478520, guid: 706546cda169446418014aeae667ff65, type: 2}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478520, guid: 706546cda169446418014aeae667ff65, type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1212309447}
+    - target: {fileID: 11478520, guid: 706546cda169446418014aeae667ff65, type: 2}
+      propertyPath: enemyHealthBar
+      value: 
+      objectReference: {fileID: 1302372697}
+    - target: {fileID: 11478520, guid: 706546cda169446418014aeae667ff65, type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 135979410}
+    - target: {fileID: 11478520, guid: 706546cda169446418014aeae667ff65, type: 2}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1157444268}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 706546cda169446418014aeae667ff65, type: 2}
   m_IsPrefabParent: 0
